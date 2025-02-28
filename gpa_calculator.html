@@ -8,23 +8,24 @@
     <script>
          // Function to calculate and display GPA
          function calculateGPA(grades) {
-            // GPA conversion table
+            
             const gradeToNumeric = { A: 4.0, B: 3.0, C: 2.0, D: 1.0, F: 0.0 };
-
-            // Convert grades to numeric values
+// GPA conversion table
+            
             const numericGrades = grades.map(grade => gradeToNumeric[grade.toUpperCase()]);
-
+// Convert grades to numeric values
             // Calculate the average numeric GPA
             const averageGPA = numericGrades.reduce((sum, grade) => sum + grade, 0) / grades.length;
 
-            // Convert the average GPA to alphabetical format
+        // Convert the average GPA to alphabetical format
             let alphabeticalGPA;
             if (averageGPA >= 3.5) alphabeticalGPA = "A";
             else if (averageGPA >= 2.5) alphabeticalGPA = "B";
             else if (averageGPA >= 1.5) alphabeticalGPA = "C";
             else if (averageGPA >= 0.5) alphabeticalGPA = "D";
             else alphabeticalGPA = "F";
-
+// debugger statement to pause the execution of the script at a specific point
+            
             // Display the result
             document.write(`The average numeric GPA is: ${averageGPA.toFixed(2)}`); 
             document.write(`  --------   The GPA in alphabetical format is: ${alphabeticalGPA}`);
